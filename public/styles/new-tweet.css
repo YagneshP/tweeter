@@ -27,3 +27,7 @@ main form button {
   color:white;
   border:none;
 }
+
+.over-limit {
+  color: red;
+}
