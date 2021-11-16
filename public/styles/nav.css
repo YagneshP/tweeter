@@ -4,8 +4,22 @@ nav {
   background-color: #4056A1;
   color: #ffffff;
   padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav span {
   font-family:'Bungee', sans-serif, cursive;
+}
+
+nav div i {
+  color : red;
+}
+
+nav div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
