@@ -5,9 +5,7 @@ $("document").ready(function() {
     const wordCount = 140;
     const $counter = $($(this).parent('form')).find('.counter');
     const remainingWords = wordCount- $tweet.length;
-    if($tweet.length > wordCount) {
-      $counter.addClass('over-limit');
-    };
+    $counter.toggleClass('over-limit',$tweet.length > wordCount);
     $counter.text(remainingWords);
   })
 });
