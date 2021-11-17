@@ -1,0 +1,36 @@
+.tweeter-box {
+  border : 3px solid #545149;
+  height: 300px;
+  margin: 1.2em 0;
+  padding: 1.2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tweeter-box header, .tweeter-box footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.tweeter-box footer {
+  border-top: 3px solid #545149;
+  padding: 1.2em 0.8em;
+  font-size: medium;
+}
+
+.tweeter-box footer .icons {
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
+ color: salmon;
+}
