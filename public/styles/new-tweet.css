@@ -2,6 +2,7 @@ main form {
   display: flex;
   flex-direction: column;
   font-weight: 600;
+  margin: 1.2em 0;
 }
 
 #tweet-text {
