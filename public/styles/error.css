@@ -1,0 +1,8 @@
+#error-display {
+  border : 3px solid red;
+  color: red;
+  margin : 1.2em 0;
+  padding: 0.5em 1.2em;
+  text-align: center;
+  font-weight: 600;
+}
