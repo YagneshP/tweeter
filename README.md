@@ -1,9 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributors][contributors-shield]][]
+[![Forks][forks-shield]][]
+[![Stargazers][stars-shield]][]
+[![Issues][issues-shield]][]
+[![MIT License][license-shield]][]
+[![LinkedIn][linkedin-shield]][]
 
 # Tweeter Project
 
