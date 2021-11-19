@@ -7,7 +7,17 @@
 
 $("document").ready(function() {
   const $error = $('#error-display');
+  const $writeTweetBtn = $('.write-tweet');
+  const $tweetForm = $(".new-tweet form");
   $error.hide();
+  $tweetForm.hide();
+
+  //======= togglingForm(strecth)========//
+  $writeTweetBtn.on('click', function() {
+    $tweetForm.toggle("fast");
+  })
+
+
   //========createTweetElement============//
   const createTweetElement = function(tweetData) {
     const {user,content,created_at} = tweetData;
@@ -59,7 +69,7 @@ const renderTweets = function(arr) {
 
   loadTweets();
   //========== AJAX submit ==========//
-  $tweetForm = $(".new-tweet form");
+  
   $tweetForm.submit(function(e) {
     e.preventDefault();
     const $textArea = $(this).children('textarea');
@@ -88,9 +98,6 @@ const renderTweets = function(arr) {
     } else {
       $error.html('<p> <i class="fas fa-exclamation-triangle"></i> Your tweet should not be empty! <i class="fas fa-exclamation-triangle"></i> </p>');
       $error.slideDown();
-    }
-    
+    } 
   });
-
-
 });
