@@ -35,6 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+![](docs/counter.gif)
 <img src='https://github.com/YagneshP/tweeter/blob/master/docs/counter.gif'>
 
 Tweeter is one of the project which i have built during webdevelopment bootcamp. User can locally run this project and write tweet/messages. While building this project, i have sharpen my skills on HTML, CSS, Jquery, AJAX and Responsive web-design.
