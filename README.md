@@ -35,7 +35,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src='https://github.com/YagneshP/tweeter/blob/master/docs/counter.gif'>
 
 Tweeter is one of the project which i have built during webdevelopment bootcamp. User can locally run this project and write tweet/messages. While building this project, i have sharpen my skills on HTML, CSS, Jquery, AJAX and Responsive web-design.
 <p align="right">(<a href="#top">back to top</a>)</p>
