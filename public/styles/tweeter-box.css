@@ -1,5 +1,5 @@
 .tweeter-box {
-  border : 3px solid #545149;
+  border: 3px solid #545149;
   height: 300px;
   margin: 1.2em 0;
   padding: 1.2em;
@@ -8,7 +8,8 @@
   justify-content: space-between;
 }
 
-.tweeter-box header, .tweeter-box footer {
+.tweeter-box header,
+.tweeter-box footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,8 +19,8 @@
   display: flex;
   align-items: center;
 }
-.profile p{
- margin-left: 1em;
+.profile p {
+  margin-left: 1em;
 }
 .tweeter-box footer {
   border-top: 3px solid #545149;
@@ -33,7 +34,8 @@
   justify-content: space-around;
 }
 
-.fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
- color: salmon;
+.fa-flag:hover,
+.fa-retweet:hover,
+.fa-heart:hover {
+  color: salmon;
 }
-

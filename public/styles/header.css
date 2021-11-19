@@ -5,7 +5,7 @@ nav + header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #D9CE80;
+  background-color: #d9ce80;
   margin-top: 120px;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   position: relative;
