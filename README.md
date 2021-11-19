@@ -35,9 +35,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![counter](https://github.com/YagneshP/tweeter/blob/master/docs/counter.gif)
-<img src='https://github.com/YagneshP/tweeter/blob/master/docs/responsive.gif'>
-![esponsive](https://github.com/YagneshP/tweeter/blob/master/docs/tweet_message.gif)
+<img src='https://github.com/YagneshP/tweeter/blob/master/docs/tweet_message.gif' width="300">
+
+<img src='https://github.com/YagneshP/tweeter/blob/master/docs/responsive.gif' width="300">
+
+<img src='https://github.com/YagneshP/tweeter/blob/master/docs/counter.gif' width="300">
 
 Tweeter is one of the project which i have built during webdevelopment bootcamp. User can locally run this project and write tweet/messages. While building this project, i have sharpen my skills on HTML, CSS, Jquery, AJAX and Responsive web-design.
 <p align="right">(<a href="#top">back to top</a>)</p>
