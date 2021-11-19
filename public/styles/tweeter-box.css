@@ -18,7 +18,9 @@
   display: flex;
   align-items: center;
 }
-
+.profile p{
+ margin-left: 1em;
+}
 .tweeter-box footer {
   border-top: 3px solid #545149;
   padding: 1.2em 0.8em;
@@ -34,3 +36,4 @@
 .fa-flag:hover, .fa-retweet:hover, .fa-heart:hover {
  color: salmon;
 }
+
