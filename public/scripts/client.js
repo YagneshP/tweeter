@@ -48,7 +48,6 @@ $("document").ready(function() {
   };
 
   //========== renderTweets ============//
-
   const renderTweets = function(arr) {
     arr.forEach((el) => {
       const $tweet = createTweetElement(el);
