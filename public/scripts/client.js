@@ -8,7 +8,8 @@ $("document").ready(function() {
   const $error = $("#error-display");
   const $writeTweetBtn = $(".write-tweet");
   const $tweetForm = $(".new-tweet form");
-  
+  const $counter = $(".counter");
+  const $textArea = $($tweetForm).children("textarea");
   //======= togglingForm(strecth)========//
   $writeTweetBtn.on("click", function() {
     $tweetForm.toggle("fast");
@@ -77,8 +78,8 @@ $("document").ready(function() {
     $tweetForm.hide();
   }
   
-  //======== reset ==========//
-  const reset = function() {
+   //======== reset ==========//
+   const reset = function() {
     $error.hide();
     $textArea.val("");
     $("#tweet-container").empty();
@@ -87,37 +88,26 @@ $("document").ready(function() {
   }
   
   
-  
-  
-  
-  
-  
-  
-  
-  
   //========== AJAX submit ==========//
-
   $tweetForm.submit(function(e) {
     e.preventDefault();
-    const $textArea = $(this).children("textarea");
-    const $counter = $(".counter");
     const $tweet = $textArea.val();
-
-    if ($tweet) {
-      if ($tweet.length > 140) {
-        errorHandle('Too many characters! Make sure your tweet is not more than 140 words')
-      } else {
-        const $serializedData = $(this).serialize();
-        $.post("/tweets", $serializedData)
-          .done(() => {
-            reset();
-          })
-          .fail(() => {
-            errorHandle('Something is not right! from server')
-          });
-      }
-    } else {
-      errorHandle('Your tweet should not be empty!');
+    if (!$tweet) {
+      return errorHandle('Your tweet should not be empty!');
     }
+    if ($tweet.length > 140) {
+      return errorHandle('Too many characters! Make sure your tweet is not more than 140 words');
+    } 
+    const $serializedData = $(this).serialize();
+    $.post("/tweets", $serializedData)
+      .done(() => {
+         reset();
+      })
+      .fail(() => {
+         errorHandle('Something is not right! from server')
+      }); 
   });
+
+  init();
 });
+
