@@ -8,9 +8,7 @@ $("document").ready(function() {
   const $error = $("#error-display");
   const $writeTweetBtn = $(".write-tweet");
   const $tweetForm = $(".new-tweet form");
-  $error.hide();
-  $tweetForm.hide();
-
+  
   //======= togglingForm(strecth)========//
   $writeTweetBtn.on("click", function() {
     $tweetForm.toggle("fast");
@@ -65,7 +63,39 @@ $("document").ready(function() {
       .catch((err) => console.log("get err:", err));
   };
 
-  loadTweets();
+  //======= error handel =====//
+  const errorHandle = function(errorMsg) {
+    $error.html(
+      `<p> <i class="fas fa-exclamation-triangle"></i> ${errorMsg} <i class="fas fa-exclamation-triangle"></i> </p>`
+    );
+    $error.slideDown();
+  }
+  
+  //====== initialize =====//
+  const init = function() {
+    loadTweets();
+    $error.hide();
+    $tweetForm.hide();
+  }
+  
+  //======== reset ==========//
+  const reset = function() {
+    $error.hide();
+    $textArea.val("");
+    $("#tweet-container").empty();
+    $counter.text("140");
+    loadTweets();
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   //========== AJAX submit ==========//
 
   $tweetForm.submit(function(e) {
@@ -76,32 +106,19 @@ $("document").ready(function() {
 
     if ($tweet) {
       if ($tweet.length > 140) {
-        $error.html(
-          '<p> <i class="fas fa-exclamation-triangle"></i> Too many characters! Make sure your tweet is not more than 140 words <i class="fas fa-exclamation-triangle"></i> </p>'
-        );
-        $error.slideDown();
+        errorHandle('Too many characters! Make sure your tweet is not more than 140 words')
       } else {
         const $serializedData = $(this).serialize();
         $.post("/tweets", $serializedData)
           .done(() => {
-            $error.hide();
-            $textArea.val("");
-            $("#tweet-container").empty();
-            $counter.text("140");
-            loadTweets();
+            reset();
           })
           .fail(() => {
-            $error.html(
-              '<p> <i class="fas fa-exclamation-triangle"></i> Something is not right! from server <i class="fas fa-exclamation-triangle"></i> </p>'
-            );
-            $error.slideDown();
+            errorHandle('Something is not right! from server')
           });
       }
     } else {
-      $error.html(
-        '<p> <i class="fas fa-exclamation-triangle"></i> Your tweet should not be empty! <i class="fas fa-exclamation-triangle"></i> </p>'
-      );
-      $error.slideDown();
+      errorHandle('Your tweet should not be empty!');
     }
   });
 });
