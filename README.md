@@ -91,8 +91,6 @@ Tweeter is one of the project which i have built during webdevelopment bootcamp.
 
 User can write message, which is limted to 140 characters, and can see his/her latest message on list. This site is responsive.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
